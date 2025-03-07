@@ -1,0 +1,83 @@
+HTML:
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Animación CSS</title>
+
+<script src="https://static.elfsight.com/platform/platform.js" async></script>
+<div class="elfsight-app-8b31fb0d-2761-476f-b17d-b35caa501072" data-elfsight-app-lazy></div>
+    
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+
+CSS:
+
+body {
+    background-color: #000000;
+}
+
+.box {
+    width: 500px;
+    height: 500px;
+    background-color: #000000;
+    margin-top: 10%;
+    margin-left: 40%;
+    border-radius: 10px;
+    animation: color-changes 6s infinite, changes-size 6s infinite;
+}
+
+@keyframes color-changes {
+    0% {
+        background-color: cyan;
+        box-shadow: 0 0 40px rgba(0, 255, 255, 1);
+    }
+
+    25% {
+        background-color: magenta;
+        box-shadow: 0 0 30px rgba(255, 0, 255, 0.8);
+    }
+
+    50% {
+        background-color: yellow;
+        box-shadow: 0 0 50px rgba(255, 255, 0, 1);
+    }
+
+    75% {
+        background-color: lime;
+        box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
+    }
+
+    100% {
+        background-color: cyan;
+        box-shadow: 0 0 40px rgba(0, 255, 255, 1);
+    }
+}
+
+@keyframes changes-size {
+    0% {
+        transform: scale(1) rotate(0deg); 
+    }
+
+    25% {
+        transform: scale(0.7) rotate(90deg); 
+    }
+
+    50% {
+        transform: scale(0.5) rotate(180deg); 
+    }
+
+    75% {
+        transform: scale(0.7) rotate(270deg); 
+    }
+
+    100% {
+        transform: scale(1) rotate(360deg); 
+    }
+}
